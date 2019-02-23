@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string> //Header file needed to use string objects
 
+//This function asks for the user input
 void add_note()
 {
   std::string title;
@@ -15,7 +16,6 @@ void add_note()
 
 int main()
 {
-
   char choice;
 
   //Display the menu to get the user's choice
@@ -24,19 +24,12 @@ int main()
   std::cout << "[E] Exit" << std::endl;
   std::cin >> choice;
 
-  if (choice=='C')
+  if ((choice == 'C') || (choice == 'c'))
   {
     add_note();   //Call the function
     std::cout << "Note added!" << std::endl;
   }
-
-  /*else if (choice == 'Q')
-  {
-
-  }
-  */
-
-  else if (choice == 'E')
+  else if ((choice == 'E') || (choice == 'e'))
   {
     std::cout << "Thank you for using TuffyNotes!" << std::endl;
   }
